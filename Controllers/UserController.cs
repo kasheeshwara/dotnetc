@@ -135,7 +135,7 @@ namespace ServiceProject.Controllers
             var identity = new ClaimsIdentity(new Claim[]
             {
                 new Claim(ClaimTypes.Role, user.Role),
-                new Claim(ClaimTypes.Name, $"{user.Name}")
+                new Claim(ClaimTypes.Name, user.Name)
             });
 
             var credentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256);
